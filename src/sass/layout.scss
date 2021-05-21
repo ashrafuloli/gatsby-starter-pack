@@ -1,0 +1,11 @@
+//@import "~bootstrap/scss/bootstrap";
+@import "~bootstrap/dist/css/bootstrap.css";
+
+@import "variables";
+@import "mixins";
+@import "customize-bootstrap";
+@import "default";
+@import "spacing";
+
+@import "header";
+@import "footer";

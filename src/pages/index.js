@@ -1,28 +1,34 @@
 import * as React from "react"
-import { Link } from "gatsby"
-import { StaticImage } from "gatsby-plugin-image"
-
-import Layout from "../components/layout"
-import Seo from "../components/seo"
+import Layout from "../components/Layout"
+import HeadMeta from "../components/Header/HeadMeta"
+import { Accordion, Card } from "react-bootstrap-v5"
 
 const IndexPage = () => (
   <Layout>
-    <Seo title="Home" />
+    <HeadMeta title="Home" />
     <h1>Hi people</h1>
-    <p>Welcome to your new Gatsby site.</p>
-    <p>Now go build something great.</p>
-    <StaticImage
-      src="../images/gatsby-astronaut.png"
-      width={300}
-      quality={95}
-      formats={["AUTO", "WEBP", "AVIF"]}
-      alt="A Gatsby astronaut"
-      style={{ marginBottom: `1.45rem` }}
-    />
-    <p>
-      <Link to="/page-2/">Go to page 2</Link> <br />
-      <Link to="/using-typescript/">Go to "Using TypeScript"</Link>
-    </p>
+    <Accordion defaultActiveKey="0">
+      <Card>
+        <Card.Header>
+          <Accordion.Toggle as={Card.Header} variant="link" eventKey="0">
+            Click me!
+          </Accordion.Toggle>
+        </Card.Header>
+        <Accordion.Collapse eventKey="0">
+          <Card.Body>Hello! I'm the body</Card.Body>
+        </Accordion.Collapse>
+      </Card>
+      <Card>
+        <Card.Header>
+          <Accordion.Toggle as={Card.Header} variant="link" eventKey="1">
+            Click me!
+          </Accordion.Toggle>
+        </Card.Header>
+        <Accordion.Collapse eventKey="1">
+          <Card.Body>Hello! I'm another body</Card.Body>
+        </Accordion.Collapse>
+      </Card>
+    </Accordion>
   </Layout>
 )
 

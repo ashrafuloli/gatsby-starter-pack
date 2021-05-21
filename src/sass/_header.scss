@@ -1,0 +1,30 @@
+.main-menu {
+  ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+
+    li {
+      margin-right: 45px;
+      position: relative;
+      display: inline-block;
+
+      &:hover {
+        > a {
+        }
+
+        > a {
+          color: $theme-color;
+        }
+      }
+
+      a {
+        color: #132339;
+        font-size: 16px;
+        text-decoration: none;
+        padding: 25px 0;
+        display: inline-block;
+      }
+    }
+  }
+}
